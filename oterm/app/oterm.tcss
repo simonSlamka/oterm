@@ -12,13 +12,12 @@ ChatContainer {
 ChatItem {
     padding: 1;
     padding-bottom: 0;
-    max-height: 50;
-    overflow: auto;
+    height: auto;
 
 }
 
 ChatItem .chatItem {
-    height: auto;
+    height: 10;
 }
 
 ChatItem .author {
