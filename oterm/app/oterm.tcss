@@ -17,7 +17,7 @@ ChatItem {
 }
 
 ChatItem .chatItem {
-    height: 10;
+    height: 1;
 }
 
 ChatItem .author {
