@@ -49,7 +49,7 @@ class ChatContainer(Widget):
         if self.messages:
             message_container = self.query_one("#messageContainer")
             for author, message in self.messages:
-                chat_item = ChatItem()
+                chat_item = ChatItem(self.ollama.model.split(":")[0])
                 chat_item.text = message
                 chat_item.author = author
                 message_container.mount(chat_item)
@@ -64,7 +64,7 @@ class ChatContainer(Widget):
         input.clear()
         input.disabled = True
         self.messages.append((Author.USER, message))
-        chat_item = ChatItem()
+        chat_item = ChatItem(self.ollama.model.split(":")[0])
         chat_item.text = message
         chat_item.author = Author.USER
         message_container.mount(chat_item)
