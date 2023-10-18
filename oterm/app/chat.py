@@ -134,7 +134,7 @@ class ChatItem(Widget):
         """A chat item."""
         with Horizontal(classes=f"{self.author.name} chatItem"):
             if self.author == Author.OLLAMA:
-                yield Static(self.mdlName, classes="mdl")
+                yield Static(self.mdlName, classes="author")
             else:
                 yield Static(self.author.value, classes="author")
             yield Static(self.text, classes="text")
