@@ -29,7 +29,7 @@ ChatItem .USER {
 }
 
 ChatItem .OLLAMA {
-    background: $panel-lighten-1;
+    background: $panel-lighten-2;
 }
 
 ChatItem .text{
