@@ -38,7 +38,7 @@ ChatItem .OLLAMA {
 ChatItem .text{
     margin: 1;
     width: 90%;
-    font-size: 1.2em;
+    text-size: 8;
 }
 
 PromptWidget {
