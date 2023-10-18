@@ -10,14 +10,14 @@ ChatContainer {
 }
 
 ChatItem {
-    padding: 1;
+    padding: 0.5;
     padding-bottom: 0;
     height: auto;
 
 }
 
 ChatItem .chatItem {
-    height: 3;
+    height: auto;
 }
 
 ChatItem .author {
@@ -35,13 +35,10 @@ ChatItem .OLLAMA {
     background: $panel-lighten-1;
 }
 
-ChatItem .mdl {
-    background: $panel-lighten-1;
-}
-
 ChatItem .text{
     margin: 1;
     width: 90%;
+    font-size: 1.2em;
 }
 
 PromptWidget {
