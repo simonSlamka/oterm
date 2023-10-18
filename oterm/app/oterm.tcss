@@ -10,7 +10,7 @@ ChatContainer {
 }
 
 ChatItem {
-    padding: 0.5;
+    padding: 1;
     padding-bottom: 0;
     height: auto;
 
