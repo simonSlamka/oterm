@@ -5,7 +5,7 @@ ChatContainer {
     overflow-y: auto;
     padding-bottom: 1;
     padding-right: 1;
-    height: 70%;
+    height: 50%;
 }
 
 ChatItem {
