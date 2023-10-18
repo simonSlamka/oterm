@@ -71,7 +71,7 @@ class ChatContainer(Widget):
 
         chat_item = ChatItem()
         chat_item.author = Author.OLLAMA
-        chat_item.mdlName = self.ollama.model
+        chat_item.mdlName = self.ollama.model.split(":")[0]
         message_container.mount(chat_item)
         loading = LoadingIndicator()
         message_container.mount(loading)
@@ -134,7 +134,7 @@ class ChatItem(Widget):
         """A chat item."""
         with Horizontal(classes=f"{self.author.name} chatItem"):
             if self.author == Author.OLLAMA:
-                yield Static(self.mdlName, classes="model")
+                yield Static(self.mdlName, classes="mdl")
             else:
                 yield Static(self.author.value, classes="author")
             yield Static(self.text, classes="text")

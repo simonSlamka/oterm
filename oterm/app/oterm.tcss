@@ -33,6 +33,10 @@ ChatItem .OLLAMA {
     background: $panel-lighten-1;
 }
 
+ChatItem .mdl {
+    background: $panel-lighten-1;
+}
+
 ChatItem .text{
     margin: 1;
     width: 90%;
