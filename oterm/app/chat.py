@@ -1,7 +1,7 @@
 import json
 from enum import Enum
 
-import socket
+import os
 
 import pyperclip
 from textual import on
@@ -107,7 +107,7 @@ class ChatContainer(Widget):
 
     def compose(self) -> ComposeResult:
         with Vertical():
-            yield Static(f"model: {self.ollama.model} @ {socket.gethostname()}", id="info")
+            yield Static(f"model: {self.ollama.model}\nURL: {os.environ['OLLAMA_URL']}", id="info")
             yield Vertical(id="messageContainer")
             yield PromptWidget(id="prompt")
 
