@@ -12,6 +12,7 @@ ChatContainer {
 ChatItem {
     padding: 1;
     padding-bottom: 0;
+    padding-right: 1;
     height: auto;
 
 }
