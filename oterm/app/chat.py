@@ -71,6 +71,7 @@ class ChatContainer(Widget):
 
         chat_item = ChatItem()
         chat_item.author = Author.OLLAMA
+        chat_item.mdlName = self.ollama.model
         message_container.mount(chat_item)
         loading = LoadingIndicator()
         message_container.mount(loading)
@@ -112,6 +113,7 @@ class ChatContainer(Widget):
 class ChatItem(Widget):
     text: reactive[str] = reactive("")
     author: Author
+    mdlName: str = ""
 
     @on(Click)
     async def on_click(self, event: Click) -> None:
@@ -131,5 +133,8 @@ class ChatItem(Widget):
     def compose(self) -> ComposeResult:
         """A chat item."""
         with Horizontal(classes=f"{self.author.name} chatItem"):
-            yield Static(self.author.value, classes="author")
+            if self.author == Author.OLLAMA:
+                yield Static(self.mdlName, classes="model")
+            else:
+                yield Static(self.author.value, classes="author")
             yield Static(self.text, classes="text")
