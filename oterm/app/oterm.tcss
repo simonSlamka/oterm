@@ -12,7 +12,7 @@ ChatContainer {
 ChatItem {
     padding: 1;
     padding-bottom: 0;
-    max-height: 50px;
+    max-height: 50;
     overflow: auto;
 
 }
